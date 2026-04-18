@@ -1,14 +1,39 @@
--- create the data base on SSMS if not exist
+/*
+    Project : Medilian Data Warehouse
+    File    : 00_init.sql
+    Purpose : Initialize database and layer schemas
+    Author  : Mustafa M. Shafeq
+*/
+
 USE master;
 GO
-CREATE DATABASE IF NOT EXISTS Medilian_DWH;
 
+IF DB_ID('Medilian_DWH') IS NULL
+BEGIN
+    CREATE DATABASE Medilian_DWH;
+END
+GO
 
--- create schemas on SMSS if not exist
 USE Medilian_DWH;
 GO
-CREATE SCHEMA IF NOT EXISTS gold;
-go
-CREATE SCHEMA IF NOT EXISTS silver;
-go
-CREATE SCHEMA IF NOT EXISTS bronze;
+
+-- Bronze layer: raw ingested data
+IF NOT EXISTS (SELECT 1 FROM sys.schemas WHERE name = 'bronze')
+BEGIN
+    EXEC('CREATE SCHEMA bronze');
+END
+GO
+
+-- Silver layer: cleaned and transformed data
+IF NOT EXISTS (SELECT 1 FROM sys.schemas WHERE name = 'silver')
+BEGIN
+    EXEC('CREATE SCHEMA silver');
+END
+GO
+
+-- Gold layer: business-ready and aggregated data
+IF NOT EXISTS (SELECT 1 FROM sys.schemas WHERE name = 'gold')
+BEGIN
+    EXEC('CREATE SCHEMA gold');
+END
+GO
