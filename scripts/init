@@ -1,8 +1,13 @@
 /*
+    =========================================================
     Project : Medilian Data Warehouse
     File    : 00_init.sql
-    Purpose : Initialize database and layer schemas
+    Purpose : Initialize database and core schemas
+              (bronze, silver, gold)
     Author  : Mustafa M. Shafeq
+    Warning : Existing database or schema names matching this
+              script will not be recreated.
+    =========================================================
 */
 
 USE master;
