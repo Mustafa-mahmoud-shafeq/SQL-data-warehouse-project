@@ -1,1 +1,14 @@
+-- create the data base on SSMS if not exist
+USE master;
+GO
+CREATE DATABASE IF NOT EXISTS Medilian_DWH;
 
+
+-- create schemas on SMSS if not exist
+USE Medilian_DWH;
+GO
+CREATE SCHEMA IF NOT EXISTS gold;
+go
+CREATE SCHEMA IF NOT EXISTS silver;
+go
+CREATE SCHEMA IF NOT EXISTS bronze;
