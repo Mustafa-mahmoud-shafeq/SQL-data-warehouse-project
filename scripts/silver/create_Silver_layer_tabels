@@ -1,9 +1,8 @@
 /*
     =========================================================
     Project : Medilian Data Warehouse
-    File    : build_the_silver_layer.sql
-    Purpose : Create silver tables, load silver data,
-              and run validation queries
+    File    : create_Silver_layer_tabels.sql
+    Purpose : Create silver tables
     Author  : Mustafa M. Shafeq
     Note    : Code below is arranged as provided.
     =========================================================
