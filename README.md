@@ -122,3 +122,11 @@ SQL-data-warehouse-project-main/
 │
 ├── LICENSE
 └── README.md
+
+## Contact
+
+If you'd like to connect, collaborate, or discuss data engineering opportunities:
+
+- Email: eng.mustafa.mahmod@gmail.com
+- LinkedIn: [Mustafa Mahmoud](www.linkedin.com/in/mustafa-mahmod-shafeq)
+- GitHub: [Mustafa-mahmoud-shafeq](https://github.com/Mustafa-mahmoud-shafeq)
